@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AutoShop — Магазин автозапчастей</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+    <div class="logo">AutoShop</div>
+    <nav>
+        <a href="#catalog">Каталог</a>
+        <a href="#contact">Контакты</a>
+        <a href="#" id="cart-btn">Корзина (<span id="cart-count">0</span>)</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Автозапчасти для любых авто</h1>
+    <p>Надёжные детали по лучшим ценам</p>
+</section>
+
+<section id="catalog" class="catalog">
+    <h2>Каталог</h2>
+
+    <input id="search" type="text" placeholder="Поиск по каталогу..." oninput="searchProducts()" />
+
+    <div class="products" id="products"></div>
+</section>
+
+<section id="cart-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+        <h2>Корзина</h2>
+        <ul id="cart-list"></ul>
+        <p><strong>Итого:</strong> <span id="cart-total">0</span> ₽</p>
+        <button onclick="closeCart()">Закрыть</button>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Контакты</h2>
+    <p>Телефон: +7 (900) 123-45-67</p>
+    <p>Email: autoparts@example.com</p>
+</section>
+
+<footer>
+    © 2025 AutoShop — бесплатный сайт
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
